@@ -132,6 +132,10 @@ Target "CreateNuGetPackages" (fun _ ->
             WorkingDir = nugetDir @@ projectName
             SymbolPackage = NugetSymbolPackage.Nuspec
             Publish = System.Convert.ToBoolean(deployToNuGet)
+            Dependencies =
+                [
+                    "Rx-Main", GetPackageVersion packagesDir "Rx-Main"
+                ]
         })
         (srcDir @@ projectName + ".nuspec")
 )
