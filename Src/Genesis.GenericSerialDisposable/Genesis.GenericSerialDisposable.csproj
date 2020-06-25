@@ -13,7 +13,16 @@
         <PackageTags>.NET mono portable netstandard ios android xamarin helper rx</PackageTags>
         <Description>Genesis.GenericSerialDisposable adds a SerialDisposable&lt;T&gt; type to the System.Reactive.Disposables namespace.</Description>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    </PropertyGroup>
+    
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
 
     <ItemGroup>
         <Compile Include="..\AssemblyInfoCommon.cs" Link="AssemblyInfoCommon.cs" />
